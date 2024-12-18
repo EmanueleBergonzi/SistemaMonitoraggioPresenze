@@ -1,0 +1,28 @@
+Il Sistema di Monitoraggio delle Presenze è un'applicazione web che consente alle aziende di tenere traccia delle presenze dei dipendenti in 
+modo semplice e strutturato. L'applicazione offre funzionalità di registrazione e visualizzazione delle ore di entrata e uscita, oltre a 
+permettere di monitorare le attività dei dipendenti in relazione ai loro dipartimenti. Questo sistema è utile per gestire e analizzare le presenze 
+quotidiane, calcolare le ore lavorate e verificare l'affidabilità dei dati relativi alle presenze, contribuendo così a una gestione più efficiente 
+delle risorse umane.
+L'interfaccia utente consente ai responsabili HR di visualizzare facilmente le informazioni relative alle presenze dei dipendenti, mentre i 
+dipendenti stessi possono consultare i propri orari di entrata e uscita tramite un'area riservata. Il sistema può essere integrato con altre 
+funzionalità aziendali, come la gestione delle ferie e dei permessi, per creare un flusso di lavoro completo.
+OBIETTIVI DEL PROGETTO
+• Registrazione delle presenze: Permettere ai dipendenti di registrare l'ora di entrata e uscita dal lavoro in modo preciso e sicuro.
+• Visualizzazione delle presenze: Fornire una vista chiara delle presenze quotidiane per ciascun dipendente, con la possibilità di accedere 
+ai dettagli storici delle presenze.
+• Monitoraggio delle assenze e dei ritardi: Rilevare e registrare automaticamente le assenze, i ritardi o le uscite anticipate, con la 
+possibilità di visualizzare report dettagliati.
+• Assegnazione ai dipartimenti: Gestire l'assegnazione dei dipendenti a dipartimenti specifici, in modo da organizzare meglio le 
+informazioni di presenza in relazione alle diverse aree aziendali.
+• Analisi e reportistica: Fornire strumenti per l'analisi dei dati delle presenze, come la generazione di report che mostrano le ore lavorate, 
+i ritardi e le assenze di ciascun dipendente. I report possono essere utilizzati per la gestione delle buste paga e la pianificazione delle 
+risorse.
+• Sicurezza dei dati: Assicurarsi che tutte le informazioni relative alle presenze siano protette da misure di sicurezza adeguate, garantendo 
+la privacy dei dati dei dipendenti e il rispetto delle normative vigenti in materia di protezione dei dati.
+• Accesso e gestione utenti: Implementare un sistema di autenticazione per consentire l'accesso al sistema solo ai dipendenti e ai 
+responsabili autorizzati. Il sistema deve consentire la gestione di diversi ruoli (dipendente, manager, amministratore).
+QUERY RICHIESTE
+1. Visualizzare le presenze dei dipendenti con i rispettivi dipartimenti.
+2. Visualizzare le presenze di un dipendente specifico.
+3. Ottenere i dipendenti senza alcuna registrazione di presenza.
+4. Trovare i dipendenti che sono entrati in ritardo (dopo le 09:00)
