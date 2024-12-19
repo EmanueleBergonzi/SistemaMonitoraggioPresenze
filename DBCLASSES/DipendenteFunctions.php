@@ -25,13 +25,13 @@ class DipedenteFuncs extends DbFuncs
         return $this->dbSelect($query, []);
     }
 
-    function selectSingle($id)
+    function selectSingle($codice)
     {
-        $query = "SELECT d.nome, d.cognome, d.codice, d.data_nascita, d.admin 
+        $query = "SELECT d.nome, d.cognome, d.codice, d.data_nascita, s.orario_entrata, s.orario_uscita 
                   FROM dipendente d 
                   INNER JOIN scheda s ON d.IdDipe = s.IdDipe 
-                  WHERE d.IdDipe = ?";
-        return $this->dbSelect($query, [$id]);
+                  WHERE d.codice = ?";
+        return $this->dbSelect($query, [$codice]);
     }
 
     function selectLates()

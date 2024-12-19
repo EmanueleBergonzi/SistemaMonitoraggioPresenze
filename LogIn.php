@@ -10,7 +10,7 @@ if($oks['codice']==true && $oks['nome']==true && $oks['cognome']==true)
     if($oks['admin']=true)
     header('Location: admin.php');
     else
-    header('Location: dipdendente.php');
+    header("Location: dipdendente.php");
 }
 else
 header('Location: LogIn.html');
