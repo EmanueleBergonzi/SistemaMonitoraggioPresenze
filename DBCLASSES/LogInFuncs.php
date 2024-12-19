@@ -3,26 +3,36 @@ require_once('DbFunctions.php');
 
 class LogInFuncs extends DBFuncs 
 {
-    private function selectCod()
+    private function select_($campo)
     {
-        $query="SELECT codice FROM dipendenti";
-        return $this->dbSelect($query,[] );
+        $query="SELECT :campo FROM dipendenti";
+        return $this->dbSelect($query,[':campo'=>$campo] );
     }
-    public function check($codice)
+    public function check($codice,$nome,$cognome)
     {
-        $rows=$this->selectCod();
-        $oks=[2];
-        foreach($rows as $dato)
-        {
-            if($dato=$codice)
-            $oks['codice']=true;
-        }
+        $rowsCodici=$this->select_('codice');
+        $rowsNomi=$this->select_('nome');
+        $rowsCognomi=$this->select_('cognome');
+        $oks=['codice'=>false,'nome'=>false,'cognome'=>false,'admin'=>false];
+        $oks['codice']=$this->singlechecks($rowsCodici,$codice);
+        $oks['nome']=$this->singlechecks($rowsNomi,$nome);
+        $oks['cognome']=$this->singlechecks($rowsCognomi,$cognome);
         $oks['admin']=$this->selectAd($codice);
         return $oks;
+    }
+    private function singlechecks($rows,$campo)
+    {
+        foreach($rows as $dato)
+        {
+            if($dato==$campo)
+            return true;
+        }
+        return false;
     }
     private function selectAd($codice)
     {
         $query="SELECT admin From dipendenti where codice=?";
         return $this->dbSelect($query,[$codice] );
     }
+
 }

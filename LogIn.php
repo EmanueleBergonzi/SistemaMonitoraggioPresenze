@@ -1,10 +1,11 @@
 <?
 require('DBCLASSES/LogInFuncs.php');
 require_once('DBCLASSES/Config.php');
-$dato=$_POST['codice'];
+$codice=$_POST['codice'];
+$nome_intero=$_POST['nome_cognome']->split(' ');
 $check=new LogInFuncs($pdo);
-$oks=$check->check($dato);
-if($oks['codice']==true)
+$oks=$check->check($codice,$nome_intero[0],$nome_intero[1]);
+if($oks['codice']==true && $oks['nome']==true && $oks['cognome']==true)
 {
     if($oks['admin']=true)
     header('Location: admin.php');
